@@ -17,7 +17,43 @@
             Console.WriteLine("Type 'left' to choose the path and go left or type 'right' to choose the cave and go right.");
             userChoice = Console.ReadLine();
             Console.WriteLine("\nYou chose: " + userChoice + "\n");
+            if (userChoice == "left")
+            {
+                Console.WriteLine("You take the path to the left. It leads you out of the jungle. You are safe to adventure another day!");
 
+            }
+            else if (userChoice == "right")
+            {
+                Console.WriteLine("You take the path to the right. It leads you into a cave. There is a spider and you evaporate out of fear!");
+            }
+            else
+            {
+                userChoice = "none";
+
+                while (userChoice != "left" && userChoice != "right" && userChoice != "up")
+                {
+                    Console.WriteLine("Please enter either 'left', 'right', or our now super secret answer of 'up'.");
+                    userChoice = Console.ReadLine();
+                    Console.WriteLine("\nYou chose: " + userChoice + "\n");
+                }
+
+                if (userChoice == "left")
+                {
+                    Console.WriteLine("You take the path to the left. It leads you out of the jungle. You are safe to adventure another day!");
+                }
+                else if (userChoice == "right")
+                {
+                    Console.WriteLine("You take the path to the right. It leads you into a cave. There is a spider and you evaporate out of fear!");
+                }
+                else if (userChoice == "up")
+                {
+                    Console.WriteLine("You take the path up and start climbing a tree and get a beautiful view from atop the cannopy");
+                }
+                else
+                {
+                    Console.WriteLine("dead :(");
+                }
+            }
         }
     }
 }
